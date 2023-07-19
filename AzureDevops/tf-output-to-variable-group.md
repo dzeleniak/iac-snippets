@@ -1,4 +1,6 @@
-# Overview
+# Terraform Output to ADO Variable Group
+
+## Overview
 This shows how to take an output from your terraform and add it to a variable group in your Azure Devops Library
 
 ## YAML Step
