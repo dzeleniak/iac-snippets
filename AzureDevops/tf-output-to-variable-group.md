@@ -33,4 +33,4 @@ This shows how to take an output from your terraform and add it to a variable gr
     AZURE_DEVOPS_EXT_PAT: $(System.AccessToken)
 ```
 ## Considerations
-- Build Service must have Administrator access for the projects Library or Variable Group
+- **[ProjectName] Build Service** must have **Administrator** access for the projects Library or Variable Group
