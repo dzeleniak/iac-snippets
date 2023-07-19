@@ -21,11 +21,11 @@ This shows how to take an output from your terraform and add it to a variable gr
     az pipelines variable-group variable create --group-id ${group_id} --name ${uuid}
 
     # Delete existing variable and recreate with new value
-    az pipelines variable-group variable delete --group-id ${group_id} --name STATIC_WEBAPP_API_KEY
+    az pipelines variable-group variable delete --group-id ${group_id} --name STATIC_WEBAPP_API_KEY --yes
     az pipelines variable-group variable create --group-id ${group_id} --name STATIC_WEBAPP_API_KEY --value ${res}
 
     # Delete the temporary variable
-    az pipelines variable-group variable delete --group-id ${group_id} --name ${uuid}
+    az pipelines variable-group variable delete --group-id ${group_id} --name ${uuid} --yes
 
   workingDirectory: ${{ parameters.TF_WORKING_DIRECTORY}}
   displayName: Export API KEY from Terraform
